@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    
+    <title>Las mejores IA's</title>
+</head>
+<body id="cuerpo">
+
+<header id="principal">
+    <button onmouseover="inicio()" id="menu">=</button>
+    <button onclick="user()" id="user"><img src="usuario.png" id="imagen"></button>    
+</header> 
+
+<!--Usuario-->
+    <button onclick="crear()" id="crear" class="account" hidden>crear cuenta</button>
+    <button onclick="iniciar()" id="iniciar" class="account" hidden>iniciar sesion</button>
+    
+<!--Registro e inicio de sesion-->
+
+    <div id="formulario" hidden>
+        <button onclick="cerr()" style="width: 7%; height: 7%; position: absolute; font-size: 2vw;border-radius: 20%; background-color: black; color: white;">X</button>
+        <img src="google.png" id="go">
+        <p id="info">Ingresa tus datos verdaderos, <br>Estaran a salvo.</p>
+        <form class="datos" id="reg" hidden>
+            Nombre: <input type="text" required id="nombre" style="font-size: 1vw;"> <br>
+            Apellido: <input type="text" required id="apellido" style="font-size: 1vw;"> <br>
+            Correo: <input type="email" name="email" required id="correo" style="font-size: 1vw;"> <br>
+            Constraseña: <input type="password" name="password" required id="contraseña" style="font-size: 1vw;"> <br>
+            Edad: <input type="number" name="edad" required id="edad" style="font-size: 1vw;"> <br>
+            Enviar <input type="submit" onclick="enviar()" style="font-size: 1vw;">
+            
+        </form>
+        <form class="datos" id="sec"hidden>
+            Correo: <input type="email" name="email" required id="correo"style="font-size: 1vw;"> <br>
+            Constraseña: <input type="password" name="password" required id="contraseña"style="font-size: 1vw;"> <br>
+            <input type="submit" onclick="enviar"style="font-size: 1vw;">
+        </form>
+    </div>
+
+<!--Menu-->
+
+    <div id="extras" hidden style="position: absolute; width: 30%; height: 40%; background-color: rgb(27, 27, 27);z-index: 2; border: 20% solid green"> 
+        <button onclick="user()" style="position: absolute; width: 80%; height: 18%;font-size: 2vw; top: 10%; background-color: blue;">Cuenta</button>
+        <button onclick="supo()" style="position: absolute; width: 80%; height: 18%; font-size: 2vw; top: 40%; background-color: blue;">Acerca de nosotros></button>
+    </div>
+
+<!--Informacion del Support-->
+
+    <div id="nosotros" hidden>
+        <div id="fundador"><img src="file-fotor-202306261941.png" id="imaf"><p onclick="t(this)" onmouseout="doc(this)" onmouseover="fund(this)" id="fund" class="na">FUNDADOR</p></div>
+        <div id="desarrollador"><img src="cat-fotor-2023062611344.png" id="imad"><p onclick="te(this)" onmouseout="dod(this)" onmouseover="adm(this)" id="adm" class="na">ADMIN</p></div>
+    </div>
+    <button onclick="ocultar()" hidden id="ocultar"><</button>
+    <button onclick="mostra()" hidden id="mostra">></button>
+                
+<!--Titulo de tema-->
+
+<div>
+    <h1 id="titulo" onmouseover="entrar()">LAS MEJORES HERRAMIENTAS<br>INTELIGENCIA ARTIFICIAL</h1>
+    <P id="confort" onmouseover="entrar()">La imprementación de la intenligencia artificial (IA) ha tenido un impacto insignificativo en mucho
+    entornos, <br>algunos de los cuales incluyen: Automatización, Medicina, Automoción, Finanzas, Comercio, etc.
+    </P> <br>
+</div>
+
+<!--Información-->
+
+<div id="text" onmouseover="entrar()">
+    <ol id="lista">
+        <br>
+        <li>
+        <!--CHATGPT-->
+            <a href="https://openai.com/blog/chatgpt" target="blank" class="subtitle"><img src="chatgpt.png" style="width: 10%; height: 10%; border-radius: 100%;"><br>CHAT GPT</a>
+            <p class="descripcion">
+                ChatGPT es un modelo de lenguaje desarrollado por OpenAI. Su función principal es procesar el lenguaje natural, lo que le permite comprender el significado de las palabras y las oraciones, y generar respuestas coherentes en un estilo natural y humano. Entonces, ChatGPT es una inteligencia artificial que puede responder preguntas, participar en conversaciones y generar un relato a partir de entradas de texto que recibe. Además, es capaz de aprender y mejorar su capacidad de procesamiento del lenguaje natural a medida que recibe más datos y retroalimentación de parte de los usuarios.
+                <br><a href="https://www.youtube.com/watch?v=fzUhO3-iuf0&pp=ygURY29tbyB1c2FyIGNoYXRncHQ%3D" target="_blank" class="link">HOW TO USE CHATGPT?</a>
+            </p>
+        </li><br>
+        <!--GRAMMARLY-->
+        <li>
+            <a href="https://www.grammarly.com/" target="_blank" class="subtitle"><img src="grammarly.png" style="width: 10%; height: 10%; border-radius: 100%;"><br>GRAMMARLY</a>
+            <p class="descripcion">
+                Grammarly es un popular corrector ortográfico y gramatical que utiliza una avanzada tecnología de IA para comprobar la gramática, ortografía y otros errores lingüísticos de los documentos. La herramienta ofrece sugerencias personalizadas para asegurarse de que su trabajo escrito está libre de errores y pulido. Incluso puede detectar plagios en tus contenidos.
+                <br><a href="https://www.youtube.com/watch?v=vNOjOtJ0s8s&pp=ygUTY29tbyB1c2FyIGdyYW1tYXJseQ%3D%3D" target="_blank" class="link">HOW TO USE GRAMMARLY?</a>
+            </p>
+        </li><br>
+        <!--BRANDMARK-->
+        <li>
+            <a href="https://brandmark.io/" target="_blank" class="subtitle"><img src="brandmark.png" style="height: 10%; width: 10%; border-radius: 60%;"><br>BRANDMARK</a>
+            <p class="descripcion">
+                BrandMark es una herramienta de diseño de logotipos basada en IA que te ayuda a crear un logotipo único para tu empresa en cuestión de minutos. Utiliza el procesamiento del lenguaje natural y el aprendizaje automático para generar logotipos personalizados basados en el nombre de su marca, sus valores, su público objetivo y mucho más. También ofrece orientación sobre cómo utilizar el logotipo de forma eficaz en diversas plataformas.
+                <br><a href="https://www.youtube.com/watch?v=ZmEJqzrzaxU&pp=ygUTY29tbyB1c2FyIGJyYW5kbWFyaw%3D%3D" target="_blank" class="link">HOW TO USE BRANDMARK?</a>
+            </p>
+        </li><br>
+        <!--GOOGLE-LENS-->
+        <li>
+            <a href="https://lens.google/intl/es-419/" target="_blank" class="subtitle"><img src="googlelens.png" style="height: 10%; width: 10%; border-radius: 100%; background-color: white;"><br>GOOGLE LENS</a>
+            <p class="descripcion">
+                Google Lens es una potente herramienta de reconocimiento de imágenes e inteligencia artificial de Google. Utiliza algoritmos de aprendizaje profundo para identificar automáticamente objetos dentro de las fotos, como plantas, animales, puntos de referencia y mucho más. Incluso puede reconocer texto en imágenes y traducirlo a otros idiomas. Esto la convierte en una herramienta inestimable para las empresas que necesitan comprender rápidamente el contenido de las fotografías.
+                <br><a href="https://www.youtube.com/watch?v=7q-k2k_YrDI&pp=ygUVY29tbyB1c2FyIGdvb2dsZSBsZW5z" target="_blank" class="link">HOW TO USE GOOGLE LENS?</a>
+            </p>
+        </li><br>
+        <!--LUMEN5-->
+        <li>
+            <a href="https://lumen5.com/" target="_blank" class="subtitle"><img src="lumens5.jpg" style="width: 10%; height: 10%; border-radius: 100%;"><br>LUMEN5</a>
+            <p class="descripcion">
+                Lumen5 es una potente herramienta de creación de vídeo que ayuda a las empresas a crear contenidos visualmente atractivos para las redes sociales de forma rápida y sencilla. 
+                Permite seleccionar un texto de origen, como un artículo o una entrada de blog, y crea automáticamente vídeos con subtítulos e imágenes de acompañamiento.
+                <br><a href="https://www.youtube.com/watch?v=WqFST7gHkI8&pp=ygUSY29tbyB1c2FyIGx1bWVuIDUg" target="_blank" class="link">HOW TO USE LUMENS?</a>
+            </p>
+        </li><br>
+        <!--JASPER-AI-->
+        <li>
+            <a href="https://www.jasper.ai/free-trial?_from=ads&fp_sid=1-g-Cj0KCQjwr82iBhCuARIsAO0EAZxEhegvF_wDo1PiEmcBVsr0hs_snqARmWVbNPrQ7tnrDY41_6nPiXgaAgqNEALw_wcB&gclid=Cj0KCQjwr82iBhCuARIsAO0EAZxEhegvF_wDo1PiEmcBVsr0hs_snqARmWVbNPrQ7tnrDY41_6nPiXgaAgqNEALw_wcB" target="_blank" class="subtitle"><img src="jasper-ai.jpg" style="width: 10%; height: 10%; border-radius: 100%;"><br>JASPER.IA</a>
+            <p class="descripcion">
+                Una herramienta de redacción basada en inteligencia artificial (IA) que automatiza una
+                amplia gama de procesos de creación de contenidos y ayuda a profesionales del marketing,
+                editores y redactores a crear rápidamente contenidos persuasivos de alta calidad.
+                <br><a href="https://www.youtube.com/watch?v=MNXv2INljcY&pp=ygUUY29tbyB1c2FyIGphc3BlciBhaSA%3D" target="_blank" class="link">HOW TO USE JASPER.IA?</a>
+            </p>
+        </li>
+    </ol>
+</div>
+</body>
+</html>
