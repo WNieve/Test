@@ -119,14 +119,14 @@ function t(id) {
 }
 
 /*Formulario*/
-/*Permite determinar el estado del usuario si es menor o mayor de edad*/
+/*Permite determinar el estado del usuario si es menor o mayor de edad
 function enviar() {
   let n = document.getElementById("edad").value;
   let text;
-  if (n >= 18) {
+  if (n >= 17) {
     text = "Puedes acceder a nuestra pagina";
-  } else {
+  } else if (n < 17) {
     text = "Eres menor de edad";
   }
   alert(text);
-}
+}*/
