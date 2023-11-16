@@ -2,7 +2,7 @@
 $servername = "127.0.0.1";
 $db_username = "root";
 $db_password = "";
-$dbname = "Usereg";
+$dbname = "Usuarios";
 
 // Conexión
 $conn = new mysqli($servername, $db_username, $db_password, $dbname);
@@ -30,11 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Error al guardar datos: " . $stmt->error;
     }
-
-    // Cerrar la declaración preparada
     $stmt->close();
 }
-
-// Cerrar la conexión
 $conn->close();
 ?>
