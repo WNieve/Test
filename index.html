@@ -26,14 +26,13 @@
         <button onclick="cerr()" style="width: 7%; height: 7%; position: absolute; font-size: 2vw;border-radius: 20%; background-color: black; color: white;">X</button>
         <img src="google.png" id="go">
         <p id="info">Ingresa tus datos verdaderos, <br>Estaran a salvo.</p>
-        <form action="index.php" class="datos" id="reg" hidden>
+        <form action="index.php" class="datos" id="reg" hidden method="post">
             Nombre de Usuario: <input type="text" required id="username" style="font-size: 1vw;"> <br>
             Correo: <input type="email" name="email" required id="correo" style="font-size: 1vw;"> <br>
             Constraseña: <input type="password" name="password" required id="contraseña" style="font-size: 1vw;"> <br>
-            Fecha de nacimiento: <input type="date" name="edad" required id="edad" style="font-size: 1vw;"> <br>
-            Enviar <input type="submit" onclick="enviar()" style="font-size: 1vw;">
-            
+            Registrar <input type="submit" onclick="enviar()" style="font-size: 1vw;">
         </form>
+        
         <form class="datos" id="sec"hidden>
             Correo: <input type="email" name="email" required id="correo"style="font-size: 1vw;"> <br>
             Constraseña: <input type="password" name="password" required id="contraseña"style="font-size: 1vw;"> <br>
