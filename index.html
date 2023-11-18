@@ -19,7 +19,6 @@
 <!--Usuario-->
     <button onclick="crear()" id="crear" class="account" hidden>crear cuenta</button>
     <button onclick="iniciar()" id="iniciar" class="account" hidden>iniciar sesion</button>
-    
 <!--Registro e inicio de sesion-->
 
     <div id="formulario" hidden>
@@ -28,15 +27,15 @@
         <p id="info">Ingresa tus datos verdaderos, <br>Estaran a salvo.</p>
         <form action="index.php" class="datos" id="reg" hidden method="post">
             Nombre de Usuario: <input type="text" required id="username" style="font-size: 1vw;"> <br>
-            Correo: <input type="email" name="email" required id="correo" style="font-size: 1vw;"> <br>
+            Correo: <input type="email" name="email" required style="font-size: 1vw;"> <br>
             Constraseña: <input type="password" name="password" required id="contraseña" style="font-size: 1vw;"> <br>
             Registrar <input type="submit" onclick="enviar()" style="font-size: 1vw;">
         </form>
         
         <form class="datos" id="sec"hidden>
-            Correo: <input type="email" name="email" required id="correo"style="font-size: 1vw;"> <br>
-            Constraseña: <input type="password" name="password" required id="contraseña"style="font-size: 1vw;"> <br>
-            <input type="submit" onclick="enviar"style="font-size: 1vw;">
+            Correo: <input type="email" name="email" required style="font-size: 1vw;"> <br>
+            Constraseña: <input type="password" name="password" required style="font-size: 1vw;"> <br>
+            <input type="submit" onclick="enviar()"style="font-size: 1vw;">
         </form>
     </div>
 
@@ -56,18 +55,14 @@
     <button onclick="ocultar()" hidden id="ocultar"><</button>
     <button onclick="mostra()" hidden id="mostra">></button>
                 
-<!--Titulo de tema-->
-
-<div>
-    <h1 id="titulo" onmouseover="entrar()">LAS MEJORES HERRAMIENTAS<br>INTELIGENCIA ARTIFICIAL</h1>
-    <P id="confort" onmouseover="entrar()">La imprementación de la intenligencia artificial (IA) ha tenido un impacto insignificativo en mucho
-    entornos, <br>algunos de los cuales incluyen: Automatización, Medicina, Automoción, Finanzas, Comercio, etc.
-    </P> <br>
-</div>
 
 <!--Información-->
-
 <div id="text" onmouseover="entrar()">
+    <h1 id="titulo">LAS MEJORES HERRAMIENTAS<br>INTELIGENCIA ARTIFICIAL</h1>
+    <p id="confort">La imprementación de la intenligencia artificial (IA) ha tenido un impacto insignificativo en mucho
+    entornos, <br>algunos de los cuales incluyen: Automatización, Medicina, Automoción, Finanzas, Comercio, etc.
+    </p>
+
     <div id="lista">
     <!--CHATGPT-->   
        <p class="descripcion">

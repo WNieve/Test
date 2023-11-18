@@ -80,13 +80,7 @@ function mostra() {
   os.hidden = false;
 }
 
-
-
 //Añadido recientemente
-
-
-
-
 
 /*Cambio de texto*/
 /*Cambia el rol de cada uno por su el nombre dandole una tonalidad de color azul*/
