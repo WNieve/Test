@@ -228,11 +228,9 @@ header {
     text-align: center;
     font-size: 2vw;
     position: absolute;
-
     height: 12%;
     width: 100%;
-    bottom: 53%;
-
+    bottom: 50%;
     color: rgb(7, 0, 101);
 }
 
@@ -240,27 +238,33 @@ header {
     margin: 0%;
     padding: 0%;
     width: 100%;
-    top: 45%;
 }
 
 #lista {
     position: absolute;
     top: 50%;
-    margin: 3%;
+    margin: 6%;
     width: 80%;
     right: 10%;
     left: 1%;
 }
 
-.subtitle {
-    font-size: 2vw;
-    color: rgb(16, 138, 0);
+.image {
+    width: 10%; 
+    height: 10%; 
+    border-radius: 100%;
+    margin-top: 5vw;
+    margin-bottom: 1vw;
 }
+
 .descripcion {
     font-size: 2vw;
     color: white;
+    margin: 0%;
 }
-.link {
+.link_and_subtitle {
     font-size: 2vw;
     color: rgb(23, 176, 0);
+    margin: 0%;
+    padding: 0%;
 }

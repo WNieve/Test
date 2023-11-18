@@ -117,16 +117,3 @@ function t(id) {
   id.innerHTML = "+54 9 2616 41-2805";
   id.style.color = "red";
 }
-
-/*Formulario*/
-/*Permite determinar el estado del usuario si es menor o mayor de edad
-function enviar() {
-  let n = document.getElementById("edad").value;
-  let text;
-  if (n >= 17) {
-    text = "Puedes acceder a nuestra pagina";
-  } else if (n < 17) {
-    text = "Eres menor de edad";
-  }
-  alert(text);
-}*/

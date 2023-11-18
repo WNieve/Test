@@ -4,11 +4,8 @@ $servername = "127.0.0.1";
 $db_username = "root";
 $db_password = "";
 $dbname = "Users";
-
 // Conexión
 $conn = new mysqli($servername, $db_username, $db_password, $dbname);
-
-// Verificar la conexión
 if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
@@ -35,7 +32,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             echo "Error al guardar datos: " . $stmt->error;
         }
-
         // Cerrar la sentencia preparada
         $stmt->close();
     } else {
@@ -43,10 +39,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-echo "Dirigiendo a HTML";
+$result = $conn->query("SELECT * FROM tblUsuarios");
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        echo "ID: " . $row["idx"] . "<br>";
+        echo "Nombre: " . $row["username"] . "<br>";
+        echo "Correo: " . $row["email"] . "<br>";
+        // No mostrar la contraseña por razones de seguridad
+        echo "<hr>";
+    }
+} else {
+    echo "No se encontraron datos.";
+}
 header("Location: http://localhost:8000/index.html");
 exit();
-
-echo "Cerrando la base de datos";
 $conn->close();
 ?>
+c
