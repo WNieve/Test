@@ -15,17 +15,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = $_POST["nombre"];
     $correo = $_POST["correo"];
     $contraseña = password_hash($_POST["contraseña"], PASSWORD_DEFAULT);
+    $lugar = $_POST["lugar"];
 
-    // Corregir la consulta SQL para incluir todos los campos
-    $sql = "INSERT INTO tblUsuarios (username, email, contraseña) VALUES (?, ?, ?)";
+    $sql = "INSERT INTO UsuariosTBL (username, email, contraseña,lugar) VALUES (?, ?, ?, ?)";
 
-    // Ussar sentencias preparadas para mejorar la seguridad
     $stmt = $conn->prepare($sql);
     
     // Verificar si la preparación fue exitosa
     if ($stmt) {
         // Vincular los parámetros
-        $stmt->bind_param("sss", $nombre, $correo, $contraseña);
+        $stmt->bind_param($nombre, $correo, $contraseña,$lugar);
 
         if ($stmt->execute()) {
             echo "Datos guardados correctamente";
@@ -39,14 +38,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-$result = $conn->query("SELECT * FROM tblUsuarios");
+$result = $conn->query("SELECT * FROM UsuariosTBL");
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        echo "ID: " . $row["idx"] . "<br>";
-        echo "Nombre: " . $row["username"] . "<br>";
-        echo "Correo: " . $row["email"] . "<br>";
-        // No mostrar la contraseña por razones de seguridad
+        echo "Nombre: " . $row["nombre"] . "<br>";
+        echo "Correo: " . $row["correo"] . "<br>";
+        echo "Contraseña: " . $row["contraseña"] . "<br>";
+        echo "lugar" . $row["lugar"] . "<br>";
         echo "<hr>";
     }
 } else {
@@ -56,4 +55,3 @@ header("Location: http://localhost:8000/index.html");
 exit();
 $conn->close();
 ?>
-c
